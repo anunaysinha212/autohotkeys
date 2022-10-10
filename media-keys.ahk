@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -38,8 +38,12 @@ toggle:
     !.:: Send {Media_Next}
     !,:: Send {Media_Prev}
     !/:: Send {Media_Play_Pause}
+    ;Also Map Media Controls with alt x and alt z
+    !x:: Send {Volume_Up}
+    !z:: Send {Volume_Down}
     ;Tilde key for console etc.
     >^1:: Send {~}
     ;Launch Calculator
     <^>!Backspace::run calc.exe
+    !Backspace::run calc.exe
 #If

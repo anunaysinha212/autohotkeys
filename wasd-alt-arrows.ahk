@@ -23,6 +23,10 @@ toggle:
     }
     Return
 
+;Toggle te wasd to arrows using ctrl+alt+F9
+wasdToArrowToggleActive=0
+^!F9:: wasdToArrowToggleActive := !wasdToArrowToggleActive
+
 #If ScriptActive
     !w:: Send {Up}
     !a:: Send {Left}
@@ -43,4 +47,11 @@ toggle:
     !^+a:: Send ^+{Left}
     !^+s:: Send ^+{Down}
     !^+d:: Send ^+{Right}
+
+    #If wasdToArrowToggleActive
+        w:: Send {Up}
+        a:: Send {Left}
+        s:: Send {Down}
+        d:: Send {Right}
+    #If
 #If
