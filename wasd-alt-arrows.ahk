@@ -23,7 +23,7 @@ toggle:
     }
     Return
 
-;Toggle te wasd to arrows using ctrl+alt+F9
+;Toggle wasd to arrows using ctrl+alt+F9
 wasdToArrowToggleActive=0
 ^!F9:: wasdToArrowToggleActive := !wasdToArrowToggleActive
 
